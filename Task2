@@ -1,0 +1,26 @@
+struct kendaraan {
+    int torsi;
+    int hp;
+    int rpm;
+};
+
+typedef struct kendaraan kendaraan;
+void main()
+{
+   kendaraan k;
+   kendaraan *ken;
+
+   k.torsi = 300;
+   k.hp = 210;
+   k.rpm = 8000;
+
+   ken = &k;
+
+   printf("torsi kendaraan (k) : %i\n", k.torsi);
+   printf("hp kendaraan (k) : %i\n", k.hp);
+   printf("rpm kendaraan (k) : %i\n", k.rpm);
+   printf("torsi kendaraan (ken) : %i\n", ken->torsi+50);
+   printf("hp kendaraan (ken) : %i\n", ken->hp+20);
+   printf("rpm kendaraan (ken): %i\n", ken->rpm+1000);
+	getch();
+}
